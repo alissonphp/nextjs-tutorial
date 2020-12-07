@@ -18,11 +18,10 @@ export default function Home({ allPostsData }) {
             <li className={utilStyles.listItem} key={id}>
               Identifier: {id}
               <br />
-              <h3>{title}</h3>
+              <h3>
+                <Link href={`/posts/${id}`}>{title}</Link>
+              </h3>
               <p>{body}</p>
-
-              <Link href={`/posts/${id}`}>Read more</Link>
-
             </li>
           ))}
         </ul>
